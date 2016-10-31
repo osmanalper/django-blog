@@ -3,7 +3,12 @@
     <title>Django Blogu</title>
 </head>
 <body>
-    <p>Merhaba!</p>
-    <p>Çalışıyor!</p>
+  {% for post in posts %}
+  <div>
+      <p>published: {{ post.yayinlama_tarihi }}</p>
+      <h1><a href="">{{ post.baslik }}</a></h1>
+      <p>{{ post.yazi|linebreaksbr }}</p>
+  </div>
+  {% endfor %}
 </body>
 </html>
